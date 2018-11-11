@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categories-->
+        <scene sceneID="Wc1-aj-SzJ">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Eco-GP-S5r" customClass="CategoryViewController" customModule="ReefLifeTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="RSt-OJ-olZ">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" textLabel="Xne-hf-g18" detailTextLabel="QTy-A8-yOh" style="IBUITableViewCellStyleValue1" id="9aV-sh-SD1">
+                                <rect key="frame" x="90" y="66" width="499" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9aV-sh-SD1" id="osJ-Ja-drW">
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xne-hf-g18">
+                                            <rect key="frame" x="20" y="10" width="72" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QTy-A8-yOh">
+                                            <rect key="frame" x="383" y="10" width="96" height="46"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eco-GP-S5r" id="lic-yn-be7"/>
+                            <outlet property="delegate" destination="Eco-GP-S5r" id="vpf-hr-JPV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categories" id="gzI-h0-kCX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2n-IV-7XC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5074" y="-1436"/>
+        </scene>
+        <!--Species-->
+        <scene sceneID="bUg-wj-2Uu">
+            <objects>
+                <splitViewController title="Species" id="9qP-LC-OdQ" customClass="SpeciesViewController" customModule="ReefLifeTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <tabBarItem key="tabBarItem" title="Species" id="MBT-Mq-zKE"/>
+                    <connections>
+                        <segue destination="Eco-GP-S5r" kind="relationship" relationship="masterViewController" id="0eF-VG-oL3"/>
+                        <segue destination="5zz-an-Z23" kind="relationship" relationship="detailViewController" id="BmU-So-hKv"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDe-hD-Ypu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="-681"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController title="Favorites" id="8rJ-Kc-sve" customClass="FavoritesViewController" customModule="ReefLifeTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbZ-jo-r0D">
+                                <rect key="frame" x="817" y="495" width="287" height="91"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lbZ-jo-r0D" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="fDC-mz-pyr"/>
+                            <constraint firstItem="lbZ-jo-r0D" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="k6E-N7-FQV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W0z-Tf-4if"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="cPa-gy-q4n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2272" y="779"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController title="Main" id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9qP-LC-OdQ" kind="relationship" relationship="viewControllers" id="iZw-Jx-x73"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="Pny-if-BNB" kind="relationship" relationship="viewControllers" id="unl-2p-q51"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="7is-vf-0bf">
+            <objects>
+                <viewController title="Search" id="Pny-if-BNB" customClass="SearchViewController" customModule="ReefLifeTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JA8-95-QRx"/>
+                        <viewControllerLayoutGuide type="bottom" id="VMB-8b-5Yy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ua2-Le-mdG">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0GM-pr-VT7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="rc4-1t-EUP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2MV-ot-fxC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="2142"/>
+        </scene>
+        <!--Species Collection View Controller-->
+        <scene sceneID="Z7V-5P-u6i">
+            <objects>
+                <collectionViewController storyboardIdentifier="SpeciesCollectionViewController" id="5zz-an-Z23" customClass="SpeciesCollectionViewController" customModule="ReefLifeTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="S7u-ws-Q0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ib8-mx-KMR">
+                            <size key="itemSize" width="302" height="242"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="speciesCell" id="4Cx-cD-4nQ">
+                                <rect key="frame" x="0.0" y="0.0" width="302" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="302" height="242"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="1000" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xI8-bN-ATN">
+                                            <rect key="frame" x="31" y="20" width="240" height="150"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKG-wR-vNa">
+                                            <rect key="frame" x="31" y="176" width="240" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <segue destination="zHD-Bz-Tns" kind="presentation" identifier="segueSpecieDetails" id="JLb-qE-ZR5"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5zz-an-Z23" id="3Jb-zT-cPz"/>
+                            <outlet property="delegate" destination="5zz-an-Z23" id="g1x-VC-mjI"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hn-zX-nP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5074" y="109"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="kf1-em-bt0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="zHD-Bz-Tns" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rxd-Ua-q1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6413" y="109"/>
+        </scene>
+    </scenes>
+</document>
